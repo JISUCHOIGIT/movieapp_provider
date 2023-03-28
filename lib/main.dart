@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movieapp_provider/src/home.dart';
 import 'package:movieapp_provider/src/provider/bottom_navigation_provider.dart';
 import 'package:movieapp_provider/src/provider/count_provider.dart';
+import 'package:movieapp_provider/src/provider/movie_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -24,6 +25,8 @@ class MyApp extends StatelessWidget {
           ChangeNotifierProvider(create: (context) => CountProvider()),
           ChangeNotifierProvider(
               create: (context) => BottomNavigationProvider()),
+          ChangeNotifierProvider(
+              create: (context) => MovieProvider())
         ],
         child: Home(),
       ),
